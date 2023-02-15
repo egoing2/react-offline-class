@@ -1,7 +1,14 @@
+import {useState} from 'react';
 function Counter({title, initValue}){
+  const [count, setCount] = useState(initValue);
+  const up = () => setCount(oldCount=>oldCount+1);
+  const down = () => setCount(oldCount=>oldCount-1);
   return <>
     <h1>{title}</h1>
-    <button>+</button> 👉 {initValue}
+    <button onClick={up}>+</button>
+    <button onClick={down}>-</button>
+    👉
+    {count}
   </>
 }
 function App() {
