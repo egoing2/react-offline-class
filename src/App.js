@@ -1,14 +1,14 @@
 import {useState} from 'react';
+import './App.css';
 function Counter({title, initValue}){
   const [count, setCount] = useState(initValue);
   const up = () => setCount(oldCount=>oldCount+1);
   const down = () => setCount(oldCount=>oldCount-1);
-  const style = {marginRight:'5px'}
   return <>
     <h1>{title}</h1>
-    <button onClick={up} style={style}>+</button>
-    <button onClick={down} style={style}>-</button>
-    <span style={style}>👉</span>
+    <button onClick={up} className="space-right">+</button>
+    <button onClick={down} className="space-right">-</button>
+    <span className="space-right">👉</span>
     {count}
   </>
 }
