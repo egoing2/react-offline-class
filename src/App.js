@@ -3,11 +3,12 @@ function Counter({title, initValue}){
   const [count, setCount] = useState(initValue);
   const up = () => setCount(oldCount=>oldCount+1);
   const down = () => setCount(oldCount=>oldCount-1);
+  const style = {marginRight:'5px'}
   return <>
     <h1>{title}</h1>
-    <button onClick={up}>+</button>
-    <button onClick={down}>-</button>
-    👉
+    <button onClick={up} style={style}>+</button>
+    <button onClick={down} style={style}>-</button>
+    <span style={style}>👉</span>
     {count}
   </>
 }
